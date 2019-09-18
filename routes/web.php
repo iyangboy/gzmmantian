@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/download', function () {
+    return response()->download('download/daxiangjiebei2.apk');
+});
