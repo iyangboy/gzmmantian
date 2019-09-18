@@ -12,11 +12,5 @@
 */
 
 Route::get('/', function () {
-    //return view('welcome');
-    echo "hello";
-});
-
-Route::get('/download', function () {
-    echo "download";
-    return response()->download('download/daxiangjiebei2.apk');
+    return view('welcome');
 });
