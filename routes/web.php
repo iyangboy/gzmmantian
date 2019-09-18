@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    echo "hello";
 });
 
 Route::get('/download', function () {
