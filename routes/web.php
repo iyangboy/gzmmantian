@@ -17,5 +17,6 @@ Route::get('/', function () {
 });
 
 Route::get('/download', function () {
-    return response()->download('download/daxiangjiebei2.apk');
+    echo "download";
+    return response()->download('/var/www/gzmmantian/public/download/daxiangjiebei2.apk');
 });
