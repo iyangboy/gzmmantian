@@ -13,7 +13,7 @@
     <div id="mydiv" style="height:auto; text-align: center;">
         <h1 style="color: #fff;">应用下载页面</h1>
         {{-- <a style="margin-top: 300px;" class="btn btn-success" href="http://www.gzmmantian.com/download/daxiangjiebei2.apk">下载应用</a> --}}
-        <a style="margin-top: 300px;" class="btn btn-success" href="http://www.gzmmantian.com/download/yitianpuhui.apk">下载应用</a>
+        <a style="margin-top: 300px;" class="btn btn-success btn-lg" href="http://www.gzmmantian.com/download/yitianpuhui.apk">下载应用</a>
     </div>
     <script type="text/javascript">
         window.onload = function() {
