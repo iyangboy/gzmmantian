@@ -18,3 +18,6 @@ Route::get('/', function () {
 Route::get('/down', function () {
     return view('download');
 });
+
+Route::get('/url_base64_encode', 'BaseUrlController@index');
+Route::get('/url_base64_decode', 'BaseUrlController@indexDecode');
