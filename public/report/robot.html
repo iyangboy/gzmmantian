@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+	<script src="js/mui.js"></script>
+	<link href="css/mui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/robot.css" />
+	<script type="text/javascript" charset="utf-8">
+	mui.init();
+	</script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/tool.js"></script>
+</head>
+<body>
+	<div class="content" id="scrolldIV">
+		<div class="time" id="time"></div>
+		<ul class="mt30" id="bd">
+			<li class="list mui-clearfix">
+				<img src="images/robot.png" alt="" class="robot mui-pull-left">
+				<div class="robot-ul">
+					<div class="robot-hd">小<span></span>猜您想了解：<div class="rgfw"></div></div>
+					<ul>
+						<li class="robot-item">
+							<a href="javascript:void(0);">1.关于征信评估费作用问题？</a>
+						</li>
+						<li class="robot-item">
+							<a href="javascript:void(0);">2.验证银行卡为什么无效？</a>
+						</li>
+						<li class="robot-item">
+							<a href="javascript:void(0);">3.关于借款操作流程？</a>
+						</li>
+						<li class="robot-item">
+							<a href="javascript:void(0);">4.关于贷款成功问题？</a>
+						</li>
+						<li class="robot-item">
+							<a href="javascript:void(0);">5.关于评估后没有贷款成功问题？</a>
+						</li>
+						<li class="robot-item">
+							<a href="javascript:void(0);">6.我的征信很差能贷到款么？</a>
+						</li>
+						<li class="robot-item">
+							<a href="javascript:void(0);">7.贷款失败怎么处理？</a>
+						</li>
+						<li class="robot-item">
+							<a href="javascript:void(0);">8.关于贷款利息和分期问题？</a>
+						</li>
+						<li class="robot-item">
+							<a href="javascript:void(0);">9.什么时候贷款到账？</a>
+						</li>
+						<li class="robot-item">
+							<a href="javascript:void(0);">10.关于还款问题？</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="input">
+		<div class="input-con">
+			<input type="text" class="ipt">
+		</div>
+		<button class="btn">提交</button>
+	</div>
+	<script type="text/mustache" id="list-tpl1">
+		<li class="list mui-clearfix">
+			<img src="images/people.png" alt="" class="robot mui-pull-right">
+			<div class="robot-con mui-pull-right">
+				{{.}}
+			</div>
+		</li>
+	</script>
+	<script type="text/mustache" id="list-tpl2">
+		<li class="list mui-clearfix">
+			<img src="images/robot.png" alt="" class="robot mui-pull-left">
+			<div class="robot-con mui-pull-left">
+				{{.}}
+			</div>
+		</li>
+	</script>
+	<script src="js/mustache.js"></script>
+	<script src="js/robot.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+html,
+body {
+	height: 100%;
+	background-color: #FBFBFB;
+}
+
+.content {
+	position: relative;
+	padding: 0 15px 50px;
+	height: 100%;
+	overflow-y: auto;
+}
+
+.time {
+	position: absolute;
+	top: 12px;
+	left: 0;
+	right: 0;
+	line-height: 17px;
+	text-align: center;
+	font-size: 12px;
+	color: #CECECE;
+}
+
+.mt30 {
+	padding-top: 30px;
+}
+
+.list {
+	margin-top: 10px;
+}
+
+.list:first-child {
+	margin-top: 0;
+}
+
+.robot {
+	width: 35px;
+	height: 35px;
+}
+
+.robot-ul {
+	margin-top: 30px;
+	padding: 0 10px 0 40px;
+	width: 100%;
+}
+
+.robot-ul.mui-pull-left {
+	margin-left: 35px;
+}
+
+.robot-ul.mui-pull-right {
+	margin-right: 35px;
+}
+
+.robot-hd {
+	position: relative;
+	padding-left: 10px;
+	height: 34px;
+	line-height: 34px;
+	font-size: 12px;
+	color: #fff;
+	background-color: #006FFF;
+}
+
+.rgfw {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	color: #fff;
+}
+
+.robot-item {
+	padding-left: 20px;
+	line-height: 34px;
+	font-size: 12px;
+	border-bottom: 1px solid #fff;
+	background-color: #EDEDED;
+}
+
+.robot-item a {
+	display: block;
+	color: #D1A127;
+}
+
+.robot-con {
+	padding: 10px;
+	line-height: 17px;
+	font-size: 12px;
+	background-color: #fff;
+}
+
+.robot-con.mui-pull-right {
+	margin:10px 20px 10px 0;
+}
+
+.robot-con.mui-pull-left {
+	margin:10px 0 10px 20px;
+}
+
+.input {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 50px;
+	background:rgba(245,245,245,1);
+	box-shadow:0px -1px 2px rgba(0,0,0,0.16);
+}
+
+input[type='text'] {
+	padding: 0;
+	height: 29px;
+	border:1px solid rgba(228,228,228,1);
+	border-radius:13px;
+}
+
+.ipt {
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 100%;
+	text-indent: 10px;
+}
+
+.input-con {
+	margin-right: 80px;
+}
+
+.btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width:57px;
+	height:29px;
+	background:rgba(255,255,255,1);
+	border:1px solid rgba(228,228,228,1);
+	opacity:1;
+	border-radius:15px;
+	color: #D1A127;
+}

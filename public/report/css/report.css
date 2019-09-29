@@ -1,0 +1,230 @@
+.clearfix {
+	overflow: hidden;
+}
+
+.report {
+	margin-top: 10px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.qb {
+	margin-top: 5px;
+	font-size: 13px;
+} 
+
+.container {
+	margin-top: 20px;
+	width: 100%;
+	overflow-x: auto;
+	border: 1px solid #CCCCCC;
+}
+
+.content {
+	font-size: 12px;
+	width: 760px;
+	height: auto;
+	text-align: center;
+}
+
+.td {
+	float: left;
+	line-height: 40px;
+	height: 40px;
+}
+
+.wd1 {
+	width: 80px;
+}
+
+.wd2 {
+	width: 679px;
+}
+
+.wd1.tt {
+	color: #fff;
+	border-right: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	background-color: #28C7CF;
+}
+
+.wd2.tt {
+	border-bottom: 2px solid #2B96B7;
+}
+
+.tr {
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.info {
+	margin-top: 10px;
+	height: 60px;
+	background-color: #D7D9D7;
+}
+
+.info .td {
+	height: 60px;
+	line-height: 60px;
+}
+
+.info .wd1,
+.info .wd3{
+	border-right: 1px solid #CCCCCC;
+}
+
+.wd3 {
+	width: 400px;
+}
+
+.wd4 {
+	width: 280px;
+}
+
+.wd5 {
+	width: 80px;
+	border-right: 1px solid #CCCCCC;
+}
+
+.wd6 {
+	width: 100px;
+}
+
+.card {
+	height: 20px;
+	line-height: 20px;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.num {
+	height: 40px;
+	line-height: 40px;
+	border-right: 1px solid #CCCCCC;
+}
+
+.address {
+	float: left;
+	width: 239px;
+	height: 40px;
+	line-height: 40px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.phone {
+	height: 40px;
+	line-height: 40px;
+	border-right: 1px solid #CCCCCC;
+}
+
+.type {
+	float: left;
+	width: 140px;
+	height: 40px;
+	line-height: 40px;
+}
+
+.mt30 {
+	margin-top: 30px;
+	border-top: 1px solid #CCCCCC;
+}
+
+.option {
+	margin-top: 10px;
+	background-color: #D7D9D7;
+}
+
+.option .td {
+	height: 60px;
+	line-height: 60px;
+}
+
+.option .wd1,
+.total .wd1 {
+	border-right: 1px solid #CCCCCC;
+}
+
+.option .spe {
+	line-height: normal;
+}
+
+.option .spe>span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+.option .spe>i {
+	width: 0;
+    height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.border {
+	border-right: 1px solid #CCCCCC;
+}
+
+.total,
+.main {
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.main.bgc {
+	background-color: #D7D9D7;
+}
+
+.main .wd1 {
+	border-right: 1px solid #CCCCCC;
+}
+
+.wd7 {
+	width: 70px;
+	border-right: 1px solid #CCCCCC;
+}
+
+.wd8 {
+	width: 500px;
+	border-right: 1px solid #CCCCCC;
+}
+
+.wd9 {
+	width: 110px;
+}
+
+.main .td {
+	height: auto;
+	line-height: normal;
+}
+
+.main.bgc .td {
+	height: 40px;
+	line-height: 40px;
+}
+
+.list {
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.main.last {
+	border-bottom: 0;
+}
+
+.read {
+	margin-top: 40px;
+	padding: 30px 10px;
+	background-color: #ccc;
+}
+
+.read h2 {
+	margin-bottom: 20px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center; 
+}
+
+.read p {
+	margin-top: 10px;
+	font-size: 13px;
+}

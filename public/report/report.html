@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+	<script src="js/mui.js"></script>
+	<link href="css/mui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/report.css" />
+	<script type="text/javascript" charset="utf-8">
+	mui.init();
+	</script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/tool.js"></script>
+	<script src="js/layer_mobile/layer.js"></script>
+</head>
+
+<body>
+	<div class="report"><span></span>风险速查报告</div>
+	<div class="qb">查询时间：<span id="date"></span></div>
+	<div class="qb">报告编码：<span id="number"></span></div>
+	<div class="container">
+		<div class="content">
+			<div class="clearfix">
+				<div class="td wd1 tt">基本信息解析</div>
+				<div class="td wd2 tt"></div>
+			</div>
+			<div class="info clearfix">
+				<div class="td wd1" id="name"></div>
+				<div class="td wd3">
+					<div class="card">身份证</div>
+					<div class="num clearfix" id="idcard">
+						
+					</div>
+				</div>
+				<div class="td wd4">
+					<div class="card">手机号</div>
+					<div class="phone clearfix" id="phone">
+						
+					</div>
+				</div>
+			</div>
+			<div class="mt30 clearfix">
+				<div class="td wd1 tt">风险检测结果</div>
+				<div class="td wd2 tt"></div>
+			</div>
+			<div class="option clearfix">
+				<div class="td wd1">检查项</div>
+				<div class="td wd5">异常行为</div>
+				<div class="td wd5">多重借贷</div>
+				<div class="td wd1">逾期信息</div>
+				<div class="td wd6 spe border"><span>信息不一<br/>致风险</span><i></i></div>
+				<div class="td wd5 spe"><span>负面信息<br/>关联数量</span><i></i></div>
+				<div class="td wd5 spe"><span>信息多人<br/>共用风险</span><i></i></div>
+				<div class="td wd5">司法信息</div>
+				<div class="td wd6 spe"><span>总计</span><i></i></div>
+			</div>
+			<div class="total clearfix">
+				<div class="td wd1">风险命中数量</div>
+				<div class="td wd5" id="num1">0</div>
+				<div class="td wd5" id="num2">0</div>
+				<div class="td wd1" id="num3">0</div>
+				<div class="td wd6 border" id="num4">0</div>
+				<div class="td wd5" id="num5">0</div>
+				<div class="td wd5" id="num6">0</div>
+				<div class="td wd5" id="num7">0</div>
+				<div class="td wd6" id="sum">0</div>
+			</div>
+			<div class="main bgc clearfix">
+				<div class="td wd1">规则集</div>
+				<div class="td wd7">规则编号</div>
+				<div class="td wd8">规则名称</div>
+				<div class="td wd9">命中结果</div>
+			</div>
+			<div class="main clearfix">
+				<table>
+					<tr>
+						<td class="wd1">异常行为</td>
+						<td class="wd7">
+							<div class="list">B001</div>
+							<div class="list">B002</div>
+							<div class="list">B003</div>
+							<div class="list">B004</div>
+							<div class="list">B005</div>
+							<div class="list">B006</div>
+						</td>
+						<td class="wd8">
+							<div class="list">用户激活借款行为异常</div>
+							<div class="list">申请人网络异常</div>
+							<div class="list">申请人异常评分过高</div>
+							<div class="list">运行商信息不良</div>
+							<div class="list">社交通讯信息异常</div>
+							<div class="list">联系人异常号码过多</div>
+						</td>
+						<td class="wd9">
+							<div class="list dts" id="B001">0</div>
+							<div class="list dts" id="B002">0</div>
+							<div class="list dts" id="B003">0</div>
+							<div class="list dts" id="B004">0</div>
+							<div class="list dts" id="B005">0</div>
+							<div class="list dts" id="B006">0</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="main mt30 clearfix">
+				<table>
+					<tr>
+						<td class="wd1">多重贷款</td>
+						<td class="wd7">
+							<div class="list">C001</div>
+							<div class="list">C002</div>
+							<div class="list">C003</div>
+						</td>
+						<td class="wd8">
+							<div class="list">同行业贷款平台数量过多</div>
+							<div class="list">多头申请信息关联过多</div>
+							<div class="list">多头申请借贷过多</div>
+						</td>
+						<td class="wd9">
+							<div class="list dts" id="C001">0</div>
+							<div class="list dts" id="C002">0</div>
+							<div class="list dts" id="C003">0</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="main mt30 clearfix">
+				<table>
+					<tr>
+						<td class="wd1">逾期信息</td>
+						<td class="wd7">
+							<div class="list">D001</div>
+							<div class="list">D002</div>
+							<div class="list">D003</div>
+							<div class="list">D004</div>
+							<div class="list">D005</div>
+							<div class="list">D006</div>
+						</td>
+						<td class="wd8">
+							<div class="list">同地区逾期风险太高</div>
+							<div class="list">同单位异常信息太多</div>
+							<div class="list">命中征信源逾期名单</div>
+							<div class="list">命中征信源默诈名单</div>
+							<div class="list">历史借贷逾期表现较差</div>
+							<div class="list">设备关联客户逾期大于7天用户较多</div>
+						</td>
+						<td class="wd9">
+							<div class="list dts" id="D001">0</div>
+							<div class="list dts" id="D002">0</div>
+							<div class="list dts" id="D003">0</div>
+							<div class="list dts" id="D004">0</div>
+							<div class="list dts" id="D005">0</div>
+							<div class="list dts" id="D006">0</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="main mt30 clearfix">
+				<table>
+					<tr>
+						<td class="wd1">信息不一致风险</td>
+						<td class="wd7">
+							<div class="list">E001</div>
+							<div class="list">E002</div>
+							<div class="list">E003</div>
+							<div class="list">E004</div>
+							<div class="list">E005</div>
+							<div class="list">E006</div>
+							<div class="list">E007</div>
+							<div class="list">E008</div>
+						</td>
+						<td class="wd8">
+							<div class="list">联系人地区信息不符</div>
+							<div class="list">申请人地区信息不符</div>
+							<div class="list">申请人基本信息不符</div>
+							<div class="list">联系人验证不通过</div>
+							<div class="list">用户基本信息不一致</div>
+							<div class="list">用户偿还验证不一致</div>
+							<div class="list">申请人查询姓名不一致</div>
+							<div class="list">联系人基本信息不一致</div>
+						</td>
+						<td class="wd9">
+							<div class="list dts" id="E001">0</div>
+							<div class="list dts" id="E002">0</div>
+							<div class="list dts" id="E003">0</div>
+							<div class="list dts" id="E004">0</div>
+							<div class="list dts" id="E005">0</div>
+							<div class="list dts" id="E006">0</div>
+							<div class="list dts" id="E007">0</div>
+							<div class="list dts" id="E008">0</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="main mt30 clearfix">
+				<table>
+					<tr>
+						<td class="wd1">负面信息关联数据</td>
+						<td class="wd7">
+							<div class="list">F001</div>
+							<div class="list">F002</div>
+							<div class="list">F003</div>
+							<div class="list">F004</div>
+							<div class="list">F005</div>
+							<div class="list">F006</div>
+							<div class="list">F007</div>
+							<div class="list">F008</div>
+							<div class="list">F009</div>
+							<div class="list">F010</div>
+							<div class="list">F011</div>
+						</td>
+						<td class="wd8">
+							<div class="list">申请人和不良信息人群联系频繁</div>
+							<div class="list">手机运营商信息不良</div>
+							<div class="list">手机运营商信息异常</div>
+							<div class="list">社交信息负面增加</div>
+							<div class="list">社交恶劣信息增加</div>
+							<div class="list">申请人和历史被拒客户联系频繁</div>
+							<div class="list">申请人重度负面信息过多</div>
+							<div class="list">申请人负面信息过多</div>
+							<div class="list">申请人和联系人联络异常</div>
+							<div class="list">申请人关联不良客户过多</div>
+							<div class="list">app使用不良信息过多</div>
+						</td>
+						<td class="wd9">
+							<div class="list dts" id="F001">0</div>
+							<div class="list dts" id="F002">0</div>
+							<div class="list dts" id="F003">0</div>
+							<div class="list dts" id="F004">0</div>
+							<div class="list dts" id="F005">0</div>
+							<div class="list dts" id="F006">0</div>
+							<div class="list dts" id="F007">0</div>
+							<div class="list dts" id="F008">0</div>
+							<div class="list dts" id="F009">0</div>
+							<div class="list dts" id="F010">0</div>
+							<div class="list dts" id="F011">0</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="main mt30 clearfix">
+				<table>
+					<tr>
+						<td class="wd1">信息多人公用风险</td>
+						<td class="wd7">
+							<div class="list">G001</div>
+							<div class="list">G002</div>
+							<div class="list">G003</div>
+							<div class="list">G004</div>
+							<div class="list">G005</div>
+						</td>
+						<td class="wd8">
+							<div class="list">申请人设备匹配数异常</div>
+							<div class="list">申请人公用信息异常</div>
+							<div class="list">申请人网络公用信息异常</div>
+							<div class="list">设备公用信息不良</div>
+							<div class="list">设备最近登录异常</div>
+						</td>
+						<td class="wd9">
+							<div class="list dts" id="G001">0</div>
+							<div class="list dts" id="G002">0</div>
+							<div class="list dts" id="G003">0</div>
+							<div class="list dts" id="G004">0</div>
+							<div class="list dts" id="G005">0</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="main last mt30 clearfix">
+				<table>
+					<tr>
+						<td class="wd1">司法信息</td>
+						<td class="wd7">
+							<div class="list">H001</div>
+							<div class="list">H002</div>
+							<div class="list">H003</div>
+							<div class="list">H004</div>
+							<div class="list">H005</div>
+						</td>
+						<td class="wd8">
+							<div class="list">司法信息查询异常</div>
+							<div class="list">手机存在不良信息</div>
+							<div class="list">欺诈风险信息评测较高</div>
+							<div class="list">银行卡风险得分较高</div>
+							<div class="list">银行卡套现风险较高</div>
+						</td>
+						<td class="wd9">
+							<div class="list dts" id="H001">0</div>
+							<div class="list dts" id="H002">0</div>
+							<div class="list dts" id="H003">0</div>
+							<div class="list dts" id="H004">0</div>
+							<div class="list dts" id="H005">0</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="read">
+		<h2>报告阅读须知</h2>
+		<p>1、本报告未经书面许可，不得篡改、复制、摘录、转载和发表</p>
+		<p>2、本报告仅供使用在取得信用信息主体征信调查授权同意条件下、按照与信息主体约定用途在自身业务中使用。使用方不得将报告内容提供给自身之外的其他第三方。</p>
+		<p>3、本报告使用方需妥善使用和保管本报告及其所载个人、企业信息，由于使用或保管不当导致个人、企业信息泄露，给信息主体带来损失的。使用方承担相应法律责任，本公司不承担任何责任。</p>
+		<p>4、本报告司法信息来自互联网属于依法公开信息：案件状态仅反应该案件收录到本机构时官方或债权人发布的案件状。</p>
+		<p>5、本报告所载信息仅供使用方参考。</p>
+	</div>
+	<script src="js/report.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,371 @@
+html,body {
+	min-height: 100%;
+	background: url(../images/bg.png) center top no-repeat;
+	-webkit-background-size: 100% 1334px;
+	background-size: 100% 1334px;
+}
+
+.content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: url(../images/head_bg.png) center top no-repeat;
+	-webkit-background-size: 100% 346px;
+	background-size: 100% 346px;
+}
+
+.head {
+	position: relative;
+	margin-bottom: 20px;
+}
+.head-icon1 {
+	position: absolute;
+	top: 8px;
+	left: 0;
+	width: 30px;
+	height: 44px;
+	animation:moveicon1 2s;
+}
+
+@keyframes moveicon1 {
+	from {transform: translate(150px,-38px);}
+	to {transform: translate(0,0);}
+}
+
+.head-icon2 {
+	position: absolute;
+	top: 86px;
+	left: 0;
+	width: 24px;
+	height: 38px;
+	animation:moveicon2 2s;
+}
+
+@keyframes moveicon2 {
+	from {transform: translate(150px,-86px);}
+	to {transform: translate(0,0);}
+}
+
+.head-icon3 {
+	position: absolute;
+	top: 50px;
+	right: 0;
+	width: 30px;
+	height: 44px;
+	animation:moveicon3 2s;
+}
+
+@keyframes moveicon3 {
+	from {transform: translate(-150px,-50px);}
+	to {transform: translate(0,0);}
+}
+
+.head-icon4 {
+	position: absolute;
+	top: 22px;
+	right: 43px;
+	width: 30px;
+	height: 30px;
+}
+
+.logo {
+	padding-top: 35px;
+	margin-left: 25px;
+	margin-right: 15px;
+}
+
+.logo img {
+	width: 100%;
+	animation:move1 2s;
+}
+
+@keyframes move1 {
+	from {transform: translate(0,-150px);}
+	to {transform: translate(0,0);}
+}
+
+.head-con {
+	margin: 21px 37px 0;
+}
+
+.head-font {
+	float: left;
+	width: 50%;
+	font-size: 15px;
+	color: #fff;
+}
+
+.head-deal {
+	float: left;
+	width: 50%;
+	height: 20px;
+	line-height: 20px;
+	font-size: 12px;
+	color: #D24B1C;
+	text-align: center;
+	background: url(../images/deal_bg.png) no-repeat;
+	-webkit-background-size: 100% 20px;
+	background-size: 100% 20px;
+}
+
+
+
+#info {
+	margin-top: 10px;
+	pointer-events: none;
+}
+
+.info {
+	text-align: center;
+	font-size: 12px;
+	color: #fff;
+}
+
+.main {
+	margin: 0 5px;
+	padding: 0 28px;
+	height: 383px;
+	background: url(../images/content_bg.png) no-repeat;
+	-webkit-background-size: 100% 383px;
+	background-size: 100% 383px;
+}
+
+.main-hd {
+	height: 75px;
+	text-align: center;
+}
+
+.main-tt {
+	display: inline-block;
+	width: 191px;
+	vertical-align: top;
+}
+
+.main-tt1 {
+	display: block;
+	margin-top: 18px;
+	font-size: 16px;
+	font-weight:bold;
+	color:rgba(7,103,230,1);
+}
+
+.main-tt-icon1 {
+	display: inline-block;
+	margin-top: 27px;
+	width: 17px;
+	height: 25px;
+	vertical-align: top;
+	background: url(../images/tt_icon1.png) no-repeat;
+	-webkit-background-size: 17px 25px;
+	background-size: 17px 25px;
+}
+
+.main-tt-icon2 {
+	display: inline-block;
+	margin-top: 27px;
+	width: 17px;
+	height: 25px;
+	vertical-align: top;
+	background: url(../images/tt_icon2.png) no-repeat;
+	-webkit-background-size: 17px 25px;
+	background-size: 17px 25px;
+}
+
+.main-tt2 {
+	display: block;
+	margin-top: 3px;
+	font-size: 11px;
+	font-weight:bold;
+	color:rgba(93,150,225,1);
+}
+
+
+.list {
+	position: relative;
+	margin: 0 0 14px;
+	height: 42px;
+	border-radius:20px;
+	overflow: hidden;
+	background:#F5F5F5;
+
+}
+
+.inpt {
+	width: 100%;
+	height: 42px;
+	line-height: 42px;
+	font-size:14px;
+	border: 0;
+	outline: 0;
+	color: #707070;
+	text-indent: 0;
+	opacity: 1;
+	/* background:rgba(7,135,172,.48); */
+}
+
+.list-icon1 {
+	position: absolute;
+	top: 12px;
+	left: 24px;
+	width: 12px;
+	height: 19px;
+}
+
+.list-icon2 {
+	position: absolute;
+	top: 13px;
+	left: 22px;
+	width: 15px;
+	height: 15px;
+}
+
+.list-icon3 {
+	position: absolute;
+	top: 13px;
+	left: 22px;
+	width: 15px;
+	height: 16px;
+}
+
+.list-con {
+	margin-left: 50px;
+}
+
+select, textarea, input[type='text'], input[type='search'], input[type='password'], input[type='datetime'], input[type='datetime-local'], input[type='date'], input[type='month'], input[type='time'], input[type='week'], input[type='number'], input[type='email'], input[type='url'], input[type='tel'], input[type='color'] {
+	background:transparent;
+}
+
+.inpt::placeholder {
+	color: #707070;
+}
+
+.block {
+	float: left;
+	position: relative;
+	margin-left: 0;
+	width: 60%;
+	border-radius:20px;
+	overflow: hidden;
+	background:#F5F5F5;
+}
+
+.list-code {
+	position: relative;
+	float: right;
+	margin-right: 0;
+	width: 36%;
+	z-index: 9999;
+	line-height: 42px;
+	font-size: 12px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	border-radius: 20px;
+	background: url(../images/vcodes.png) no-repeat;
+	-webkit-background-size: 100% 42px;
+	background-size: 100% 42px;
+}
+
+.msg {
+	display: block;
+	color: #fff;
+}
+
+#number {
+	display: block;
+	color: #fff;
+}
+
+#number {
+	display: none;
+}
+
+.apply {
+	display: block;
+	margin: 27px 0 0;
+	height:48px;
+	line-height: 48px;
+	text-align: center;
+	border-radius: 24px;
+	text-decoration: none;
+	color: #fff;
+	background:url(../images/confirm.png) no-repeat;
+	-webkit-background-size: 100% 48px;
+	background-size: 100% 48px;
+	opacity:1;
+	border-radius: 24px;
+}
+
+.link {
+	position: relative;
+	margin-top: 25px;
+	padding-right: 0;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	font-size: 12px;
+	color:#999;
+	opacity:0.64;
+	z-index: 99999;
+}
+
+.list.last {
+	margin-bottom:0;
+	border-radius:0;
+	overflow: hidden;
+	background:transparent;
+}
+
+.list.last .inpt {
+	border-radius: 20px;
+}
+
+select, textarea, input[type='text'], input[type='search'], input[type='password'] {
+	padding: 0;
+	border: 0;
+	margin-bottom: 0;
+	height: 42px;
+	line-height: 42px;
+}
+
+.layui-m-layercont {
+	padding: 30px !important;
+}
+
+.layui-m-layer0 .layui-m-layerchild {
+	width: 85% !important;
+}
+
+.layer-con {
+	text-align: center;
+}
+
+.layui-m-layerchild {
+	background-color: transparent !important;
+}
+
+.layer-msg {
+	line-height: 36px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+}
+
+.layer-goto {
+	display: inline-block;
+	margin-top: 20px;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: 15px;
+	background-color: rgba(0,0,0,.5);
+}
+
+.wrong {
+	transform: scale(0.7);
+}
