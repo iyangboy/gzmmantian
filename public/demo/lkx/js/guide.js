@@ -223,7 +223,7 @@
 											$(".layer-con").addClass("success");
 											$("#laymsg").html('注册成功');
 											$(".layer-goto").click(function() {
-                        // layer.closeAll();
+                        layer.closeAll();
                         // $content.empty().append(M.render(downloadtpl, download));
                         if (mobileType == "iphone") {
                           window.location.href = download.iphoneDownload;
