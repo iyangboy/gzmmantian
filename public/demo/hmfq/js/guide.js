@@ -111,6 +111,14 @@
 											$(".con").css("margin-top","0.8rem");
 											liboolean = false;
 											flag = 1;
+                      $("input").on("focus", function() {
+                        fn.iptFocus();
+                        fixed();
+                      })
+                      $("input").on("blur", function() {
+                        fn.iptBlur();
+                        fixed();
+                      })
 										})
 									}
 								});
