@@ -1,9 +1,9 @@
 (function(win, $) {
-
+  // 蓝卡心
 	var product_name = "lkx",
 		download = {
 			iphoneDownload: "#",
-			androidDownload: "http://www.gzmmantian.test/download/yitianpuhui.apk",
+			androidDownload: "https://fir.im/69ae",
 		},
 		into_from,
 		lay,
