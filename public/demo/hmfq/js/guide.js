@@ -95,9 +95,10 @@
 							});
 						},
 						success: function(data) {
-              console.log(data)
+              console.log(data);
 							layer.close(lay);
 							if (data.code == "0000" && data.result.status == 1) {
+                flag = 1;
 								layer.open({
 									content: laytpl2,
 									shadeClose: false,
@@ -108,9 +109,7 @@
 											layer.closeAll();
 											$item.append(litpl);
 											$(".banner").hide();
-											//$(".con").css("margin-top","0.8rem");
 											liboolean = false;
-											flag = 1;
                       $("input").on("focus", function() {
                         fn.iptFocus();
                         fixed();
