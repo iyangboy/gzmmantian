@@ -2,7 +2,7 @@
   // 蓝卡心
 	var product_name = "lkx",
 		download = {
-			iphoneDownload: "https://fir.im/69ae?test=1",
+			iphoneDownload: "https://fir.im/ckay",
 			androidDownload: "https://fir.im/69ae",
 		},
 		into_from,

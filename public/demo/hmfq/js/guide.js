@@ -2,7 +2,7 @@
   // 皇马分期
 	var product_name = "hmfq",
 		download = {
-			iphoneDownload: "https://fir.im/vzy1?test=iphone",
+			iphoneDownload: "https://fir.im/4m8h",
 			androidDownload: "https://fir.im/vzy1",
 		},
 		into_from,
