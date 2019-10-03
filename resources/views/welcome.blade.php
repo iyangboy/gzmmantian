@@ -4,10 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title></title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        {{-- <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet"> --}}
 
         <!-- Styles -->
         <style>
@@ -85,7 +85,7 @@
                 </div> --}}
 
                 <div class="links">
-                    <a href="http://www.gzmmantian.com/download/daxiangjiebei2.apk">下载应用</a>
+                    {{-- <a href="http://www.gzmmantian.com/download/daxiangjiebei2.apk">下载应用</a> --}}
                 </div>
             </div>
         </div>

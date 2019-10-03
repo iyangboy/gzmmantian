@@ -19,7 +19,7 @@
 		downloadtpl = $("#download-tpl").html(),
 		laytpl = $("#layer-tpl").html(),
 		laytpl2 = $("#layer-msg").html(),
-		M = Mustache;
+		M = Mustache;s
 
 	//检验手机型号
 	function checkMobile() {
