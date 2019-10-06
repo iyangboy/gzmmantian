@@ -2,7 +2,7 @@
   // 石榴分期
 	var product_name = "jcd",
 		download = {
-			iphoneDownload: "https://fir.im/ceyq?test=iPhone",
+			iphoneDownload: "https://fir.im/l49m",
 			androidDownload: "https://fir.im/ceyq",
 		},
 		into_from,
