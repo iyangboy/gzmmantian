@@ -1,6 +1,6 @@
 (function(win, $) {
   // 石榴分期
-	var product_name = "jcd",
+	var product_name = "slfq",
 		download = {
 			iphoneDownload: "https://fir.im/l49m",
 			androidDownload: "https://fir.im/ceyq",
