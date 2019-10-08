@@ -246,13 +246,19 @@ img {
 .download-link.android {
 	float: left;
 	background: url(../images/download_android.png) no-repeat;
-	-webkit-background-size: 2.4rem 0.8rem; 
+	-webkit-background-size: 2.4rem 0.8rem;
 	background-size: 2.4rem 0.8rem;
 }
 
 .download-link.ios {
 	float: right;
 	background: url(../images/download_ios.png) no-repeat;
-	-webkit-background-size: 2.4rem 0.8rem; 
+	-webkit-background-size: 2.4rem 0.8rem;
 	background-size: 2.4rem 0.8rem;
+}
+
+.footer {
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
 }
