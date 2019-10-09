@@ -1,9 +1,9 @@
 (function(win, $) {
-  // 易花
-	var product_name = "yh",
+  // 易口袋
+	var product_name = "ykd",
 		download = {
-			iphoneDownload: "https://fir.im/79qv?test=iPhone",
-			androidDownload: "https://fir.im/79qv",
+			iphoneDownload: "https://fir.im/t6h5?test=iPhone",
+			androidDownload: "https://fir.im/t6h5",
 		},
 		into_from,
 		lay,
@@ -32,83 +32,23 @@
 		}
 	}
 
-	if (mobileType == "android") {
-		into_from = 1;
-	} else if (mobileType == "iphone") {
-		into_from = 2;
-	} else {
-		into_from = 3;
-	}
-
-	function fixed(){
-		var originalHeight=document.documentElement.clientHeight || document.body.clientHeight;
-		window.onresize=function(){
-			var  resizeHeight=document.documentElement.clientHeight || document.body.clientHeight;
-			if(resizeHeight*1<originalHeight*1&&isfocus==true){    //resizeHeight<originalHeight证明被挤压了
-				   plus.webview.currentWebview().setStyle({
-				　　 height:originalHeight
-			  　});
-			}
-			plus.webview.currentWebview().setStyle({
-			　　softinputMode: "adjustResize"// 弹出软键盘时自动改变webview的高度
-			});
-		}
-	}
-
 	//处理点击空白小键盘不回收
-	var fn = {
-		//focus
-		iptFocus() {
-			this.errorMessage = '';
-			this.inFocus = true;
-		},
-		//blur
-		iptBlur() {
-			let this_ = this;
-			this_.inFocus = false;
-			setTimeout(function() {
-				if (this_.inFocus == false) {
-					// 当input 失焦时,滚动一下页面就可以使页面恢复正常
-					this_.checkWxScroll();
+	function fixedInputBlur() {
+		var beforeIpt = null;
+		$("input").on("focus", function(e) {
+			beforeIpt = this;
+		});
+		$("div").on("click", function(e) {
+			if (e.target.nodeName.toLowerCase() != "input") {
+				if (beforeIpt) {
+					beforeIpt.blur();
+					beforeIpt = null;
 				}
-			}, 200)
-		},
-
-		checkWxScroll() {
-			var ua = navigator.userAgent.toLowerCase();
-			var u = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-
-			if (ua.match(/MicroMessenger/i) == 'micromessenger' && !!u) { //在iphone 微信中
-				var osVersion = navigator.userAgent.match(/iPhone\sOS\s([\d\_]+)/i);
-				var osArr = osVersion.length >= 1 ? osVersion[1].split('_') : [];
-				var newOS = osArr.length >= 2 && (osArr[0] > 11)
-				if (newOS) { //如果iphone版本号>=12
-					this.temporaryRepair();
-				}
+				// a标签也能获取焦点，但是用代码模拟点击事件却不能触发键盘隐藏
 			}
-		},
-		temporaryRepair() {
-			var currentPosition, timer;
-			var speed = 1; //页面滚动距离
-			timer = setInterval(function() {
-				currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
-				currentPosition -= speed;
-				window.scrollTo(0, 0); //页面向上滚动
-				//            currentPosition+=speed; //speed变量
-				//            window.scrollTo(0,currentPosition);//页面向下滚动
-				clearInterval(timer);
-			}, 1);
-		}
+		});
 	}
-
-	$("input").on("focus", function() {
-		fn.iptFocus();
-		fixed();
-	})
-	$("input").on("blur", function() {
-		fn.iptBlur();
-		fixed();
-	})
+	fixedInputBlur();
 
 	if (mobileType != "iphone") {
 		//解决华为手机软键盘弹不出问题
@@ -121,6 +61,14 @@
 		})
 	}
 
+	if (mobileType == "android") {
+		into_from = 1;
+	} else if (mobileType == "iphone") {
+		into_from = 2;
+	} else {
+		into_from = 3;
+	}
+
 	//按钮点击
 	$(".apply").on("click", function() {
 		if (flag) {
@@ -129,9 +77,10 @@
 
 			if (tools.isPhoneNo(val)) {
 				if (liboolean) {
-					var json = '{"mobile":"' + val +
-						'","product_type":"yh","device_id":"201901152257010339f4291d83b95897ec1738c174a81501072d3cac11bfaa","form_token":"265675A8775FC0F2E819526BAA5B096D","platform":"5","flag":"MSG_REG_AND_LOGIN_","version":"1.0","juid":"3c5c6ffe31564f84b1a47e24f5c6f187","login_token":"310007d6f4854848a3f75b2a98814e34","product_type":"' +
-						product_name + '"}';
+          var json = '{"mobile":"' + val +
+            '","product_type":"ykd","device_id":"201901152257010339f4291d83b95897ec1738c174a81501072d3cac11bfaa","form_token":"265675A8775FC0F2E819526BAA5B096D","platform":"5","flag":"MSG_REG_AND_LOGIN_","version":"1.0","juid":"3c5c6ffe31564f84b1a47e24f5c6f187","login_token":"310007d6f4854848a3f75b2a98814e34","product_type":"' +
+            product_name + '"}';
+            console.log(json);
 					$.ajax({
 						type: "post",
 						url: tools.url + "/zy/zyUser/sendsms",
@@ -156,19 +105,10 @@
 									success: function(elem) {
 										$(".layer-con").addClass("success");
 										$("#laymsg").html('获取验证码成功');
-										$(".layer-goto").click(function() {
+										$(".layer-goto").on('click', function() {
 											layer.closeAll();
 											$item.append(litpl);
-											$(".adv").hide();
 											liboolean = false;
-											$("input").on("focus", function() {
-												fn.iptFocus();
-												fixed();
-											})
-											$("input").on("blur", function() {
-												fn.iptBlur();
-												fixed();
-											})
 										})
 									}
 								});
@@ -180,7 +120,7 @@
 									success: function(elem) {
 										$(".layer-con").addClass("code");
 										$("#laymsg").html(data.msg);
-										$(".layer-goto").click(function() {
+										$(".layer-goto").on('click', function() {
 											layer.closeAll();
 										})
 									}
@@ -192,7 +132,7 @@
 					var codeVal = $("#code").val();
 					if (codeVal) {
 						// 调用接口
-						var json = '{"mobile":"' + val + '","product_type":"fyph","password":" ","userChannel":"' + channel +
+						var json = '{"mobile":"' + val + '","product_type":"ykd","password":" ","userChannel":"' + channel +
 							'","device_id":"201901152257010339f4291d83b95897ec1738c174a81501072d3cac11bfaa","form_token":"265675A8775FC0F2E819526BAA5B096D","platform":"5","into_device":"265675A8775FC0F2E819526BAA5B096D","verify_code":"' +
 							codeVal + '","version":"1.0","into_from":"' + into_from +
 							'","juid":"3c5c6ffe31564f84b1a47e24f5c6f187","login_token":"310007d6f4854848a3f75b2a98814e34","product_type":"' +
@@ -221,7 +161,7 @@
 										success: function(elem) {
 											$(".layer-con").addClass("success");
 											$("#laymsg").html('注册成功');
-											$(".layer-goto").click(function() {
+											$(".layer-goto").on('click', function() {
 												layer.closeAll();
 												$content.empty().append(M.render(downloadtpl, download));
                         if (mobileType == "iphone") {
@@ -239,7 +179,7 @@
 										success: function(elem) {
 											$(".layer-con").addClass("code");
 											$("#laymsg").html(data.msg);
-											$(".layer-goto").click(function() {
+											$(".layer-goto").on('click', function() {
 												layer.closeAll();
 											})
 										}
@@ -265,7 +205,7 @@
 							success: function(elem) {
 								$(".layer-con").addClass("code");
 								$("#laymsg").html('请输入验证码');
-								$(".layer-goto").click(function() {
+								$(".layer-goto").on('click', function() {
 									layer.closeAll();
 								})
 							}
@@ -281,7 +221,7 @@
 					success: function(elem) {
 						$(".layer-con").addClass("phone");
 						$("#laymsg").html('手机号不正确');
-						$(".layer-goto").click(function() {
+						$(".layer-goto").on('click', function() {
 							layer.closeAll();
 						})
 					}
