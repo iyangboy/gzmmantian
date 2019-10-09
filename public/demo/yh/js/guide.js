@@ -2,7 +2,7 @@
   // 易花
 	var product_name = "yh",
 		download = {
-			iphoneDownload: "https://fir.im/79qv?test=iPhone",
+			iphoneDownload: "https://fir.im/hxm4",
 			androidDownload: "https://fir.im/79qv",
 		},
 		into_from,
