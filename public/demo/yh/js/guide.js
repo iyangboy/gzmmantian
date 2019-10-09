@@ -3,7 +3,7 @@
 	var product_name = "yh",
 		download = {
 			iphoneDownload: "https://fir.im/ckay",
-			androidDownload: "https://fir.im/69ae",
+			androidDownload: "https://fir.im/79qv",
 		},
 		into_from,
 		lay,
