@@ -12,6 +12,7 @@
 */
 
 Route::get('/', function () {
+    return redirect('company/index.html');
     return view('welcome');
 });
 
