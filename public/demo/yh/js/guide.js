@@ -192,7 +192,7 @@
 					var codeVal = $("#code").val();
 					if (codeVal) {
 						// 调用接口
-						var json = '{"mobile":"' + val + '","product_type":"fyph","password":" ","userChannel":"' + channel +
+						var json = '{"mobile":"' + val + '","product_type":"yh","password":" ","userChannel":"' + channel +
 							'","device_id":"201901152257010339f4291d83b95897ec1738c174a81501072d3cac11bfaa","form_token":"265675A8775FC0F2E819526BAA5B096D","platform":"5","into_device":"265675A8775FC0F2E819526BAA5B096D","verify_code":"' +
 							codeVal + '","version":"1.0","into_from":"' + into_from +
 							'","juid":"3c5c6ffe31564f84b1a47e24f5c6f187","login_token":"310007d6f4854848a3f75b2a98814e34","product_type":"' +
