@@ -1,9 +1,11 @@
 (function(win, $) {
-  // 易花
-	var product_name = "yh",
+  // 易花->石榴分期
+	var product_name = "slfq",
 		download = {
-			iphoneDownload: "https://fir.im/ny5d",
-			androidDownload: "https://fir.im/79qv",
+			// iphoneDownload: "https://fir.im/ny5d",
+			// androidDownload: "https://fir.im/79qv",
+      iphoneDownload: "https://fir.im/l49m",
+      androidDownload: "https://fir.im/ceyq",
 		},
 		into_from,
 		lay,
@@ -130,7 +132,7 @@
 			if (tools.isPhoneNo(val)) {
 				if (liboolean) {
 					var json = '{"mobile":"' + val +
-						'","product_type":"yh","device_id":"201901152257010339f4291d83b95897ec1738c174a81501072d3cac11bfaa","form_token":"265675A8775FC0F2E819526BAA5B096D","platform":"5","flag":"MSG_REG_AND_LOGIN_","version":"1.0","juid":"3c5c6ffe31564f84b1a47e24f5c6f187","login_token":"310007d6f4854848a3f75b2a98814e34","product_type":"' +
+						'","device_id":"201901152257010339f4291d83b95897ec1738c174a81501072d3cac11bfaa","form_token":"265675A8775FC0F2E819526BAA5B096D","platform":"5","flag":"MSG_REG_AND_LOGIN_","version":"1.0","juid":"3c5c6ffe31564f84b1a47e24f5c6f187","login_token":"310007d6f4854848a3f75b2a98814e34","product_type":"' +
 						product_name + '"}';
 					$.ajax({
 						type: "post",
@@ -192,7 +194,7 @@
 					var codeVal = $("#code").val();
 					if (codeVal) {
 						// 调用接口
-						var json = '{"mobile":"' + val + '","product_type":"yh","password":" ","userChannel":"' + channel +
+						var json = '{"mobile":"' + val + '","password":" ","userChannel":"' + channel +
 							'","device_id":"201901152257010339f4291d83b95897ec1738c174a81501072d3cac11bfaa","form_token":"265675A8775FC0F2E819526BAA5B096D","platform":"5","into_device":"265675A8775FC0F2E819526BAA5B096D","verify_code":"' +
 							codeVal + '","version":"1.0","into_from":"' + into_from +
 							'","juid":"3c5c6ffe31564f84b1a47e24f5c6f187","login_token":"310007d6f4854848a3f75b2a98814e34","product_type":"' +
