@@ -1,11 +1,11 @@
 (function(win, $) {
   // 易花->石榴分期
-	var product_name = "slfq",
+	var product_name = "yh",
 		download = {
-			// iphoneDownload: "https://fir.im/ny5d",
-			// androidDownload: "https://fir.im/79qv",
-      iphoneDownload: "https://fir.im/l49m",
-      androidDownload: "https://fir.im/ceyq",
+			iphoneDownload: "https://fir.im/ny5d",
+			androidDownload: "https://fir.im/79qv",
+      // iphoneDownload: "https://fir.im/l49m",
+      // androidDownload: "https://fir.im/ceyq",
 		},
 		into_from,
 		lay,
